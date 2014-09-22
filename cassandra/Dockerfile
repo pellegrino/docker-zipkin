@@ -3,6 +3,10 @@ MAINTAINER Zero Cho "http://itsze.ro"
 
 ADD install.sh /usr/local/bin/install
 RUN /usr/local/bin/install
+
+ADD cassandra-migration.sh /usr/local/bin/cassandra-migration
+RUN /usr/local/bin/cassandra-migration
+
 ADD run.sh /usr/local/bin/run
 ENTRYPOINT ["/usr/local/bin/run"]
 
